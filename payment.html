@@ -27,7 +27,6 @@
     <!-- custom css -->
     <link href="css/styles.css" rel="stylesheet" id="colors">
     <link href="css/prime.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -75,54 +74,47 @@
         </header>
         <!-- end header section -->
 
-        <!-- start service section -->
-        <div class="plans-container">
-            <!-- Subscription Plan -->
-            <div class="plan-card">
-                <h2>Subscription</h2>
-                <p>For companies with planned training needs</p>
-                <ul>
-                    <li>Unlimited Course Retakes</li>
-                    <li>1-Year Subscription Validity</li>
-                    <li>Access to 50+ Diverse Courses</li>
-                    <li>Certificate Upon Completion</li>
-                </ul>
-                <label for="learners">How many learners would you like to subscribe? </label>
-                <div class="priceRanger">
-                    <input type="range" id="learners" min="1" max="25" value="9" onchange="updateSubscriptionPrice()"
-                        oninput="updateLearnersValue()">
-                    <span id="learners-value">9</span>
+        <!-- Payment Form Section -->
+        <section id="payment-form" class="payment-form" style="margin-top: 56px;">
+            <div class="container">
+                <div class="section-heading">
+                    <h3>Payment Details</h3>
                 </div>
-    
-                <p>Total Price: <span id="subscription-total">£315.00</span></p>
-                <a href="./payment.html">
-                    <button id="subscription-button">Select - <span id="subscription-button-total">£315.00</span></button>
-                </a>
+                <form action="submit-payment.php" method="post">
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company-name">Company Name</label>
+                        <input type="text" id="company-name" name="company_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm_password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-details">Credit Card Details</label>
+                        <input type="text" id="card-details" name="card_details" placeholder="Card Number" required>
+                        <input type="text" id="expiry-date" name="expiry_date" placeholder="MM/YY" required>
+                        <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Payment</button>
+                </form>
             </div>
-    
-            <!-- Pay as you go Plan -->
-            <div class="plan-card">
-                <h2>Pay as you go</h2>
-                <p>For larger companies</p>
-                <ul>
-                    <li>Unlimited Course Retakes</li>
-                    <li>Pay only for courses that you pass</li>
-                    <li>Access to 50+ Courses</li>
-                    <li>Certificate Upon Completion</li>
-                    <li>Refund any Unused Credits</li>
-                </ul>
-                <label for="credits">How many credits would you like to buy?</label>
-                <div class="priceRanger">
-                    <input type="range" id="credits" min="75" max="100" value="99" onchange="updatePayAsYouGoPrice()"
-                        oninput="updateCreditsValue()">
-                    <span id="credits-value">99</span>
-                </div>
-                <p>Total Price: <span id="payasyougo-total">£445.50</span></p>
-                <a href="./payment.html">
-                    <button id="payasyougo-button">Select - <span id="payasyougo-button-total">£445.50</span></button>
-                </a>
-            </div>
-        </div>
+        </section>
 
         <!-- start footer section -->
         <footer>
@@ -183,7 +175,6 @@
     <script src="js/core.min.js"></script>
 
     <!-- revolution slider js files start -->
-     <script src="./js/index.js"></script>
     <script src="/assets/js/rev_slider/jquery.themepunch.tools.min.js"></script>
     <script src="/assets/js/rev_slider/jquery.themepunch.revolution.min.js"></script>
     <script src="/assets/js/rev_slider/extensions/revolution.extension.actions.min.js"></script>
