@@ -75,4 +75,9 @@ form .btn{
     color: #fff;
     margin-top: 5px;
     cursor: pointer;
+    transition: 5s;
+}
+
+form .btn:hover{
+    background: #02bd21;
 }
