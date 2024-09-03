@@ -149,12 +149,15 @@ body {
 }
 
 .priceRanger {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space out elements */
     margin: 20px 0;
 }
 
-input[type="range"] {
-    width: 100%;
-    margin: 10px 0;
+.priceRanger input[type="range"] {
+    width: calc(100% - 150px); /* Adjust width to fit next to the button */
+    margin: 0; /* Reset margin */
 }
 
 button {
@@ -256,9 +259,14 @@ footer h3 {
         margin: 10px 0;
     }
     
+    .priceRanger {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: stretch; /* Ensure children take up full width */
+    }
+
     .priceRanger input[type="range"] {
-        width: calc(100% - 20px);
-        margin: 10px auto;
+        width: 100%;
+        margin: 10px 0;
     }
 
     .scroll-to-top {
