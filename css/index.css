@@ -6,6 +6,7 @@ body {
     color: #333;
     background-color: #f9f9f9;
     padding-top: 70px; /* Ensure content isn't hidden behind the fixed header */
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
 }
 
 /* Container */
@@ -222,7 +223,8 @@ footer h3 {
     font-size: 1.5rem;
     text-align: center;
     cursor: pointer;
-    display: none;
+    display: none; /* Hidden by default */
+    z-index: 9999; /* Ensure it stays above other elements */
 }
 
 .scroll-to-top:hover {
