@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #02bd21;
+    --background-color: #858181;
+    --white: #fff;
+    --border-color: #ccc;
+    --text-color: #333;
+    --max-width: 1200px; /* Added for responsive max-width */
 }
 
 .container {
@@ -12,80 +21,113 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #858181;
+    background: var(--background-color);
     padding: 25px;
 }
 
-.container form{
-    width: 900px;
-    padding: 40px;
-    background: #fff;
+.container form {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    background: var(--white);
     border-radius: 10px;
 }
 
-form .row{
+form .row {
     display: flex;
-    gap: 10px;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
-.row .column{
-    flex: 1 1 250px;
+.row .column {
+    flex: 1 1 calc(50% - 15px); /* Adjusted for responsive layout */
+    min-width: 250px;
 }
 
 .column .title {
-    font-size: 20px;
-    color: #333;
+    font-size: 1.25rem; /* Responsive font size */
+    color: var(--text-color);
     text-transform: uppercase;
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
 }
 
-.column .input-box{
-    margin: 15px 0;
+.column .input-box {
+    margin: 1rem 0;
 }
 
-.input-box span{
+.input-box span {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
 }
 
-.input-box input{
-    width: 190px;
-    padding: 10px 15px;
-    border: 1px solid #ccc;
+.input-box input {
+    width: 100%;
+    max-width: 100%; /* Full width within its container */
+    padding: 0.625rem 0.9375rem; /* Responsive padding */
+    border: 1px solid var(--border-color);
     border-radius: 6px;
-    font-size: 15px;
+    font-size: 0.9375rem; /* Responsive font size */
 }
 
-.column .flex{
+.column .flex {
     display: flex;
     gap: 15px;
 }
 
-.flex .input-box{
-    margin-top: 5px;
+.flex .input-box {
+    margin-top: 0.5rem;
 }
 
-.input-box img{
-    height: 34px;
-    margin-top: 5px;
-    filter: drop-shadow(0 0 1px #000)
+.input-box img {
+    height: 2.125rem; /* Responsive height */
+    margin-top: 0.5rem;
+    filter: drop-shadow(0 0 1px #000);
 }
 
-form .btn{
+form .btn {
     width: 100%;
-    padding: 12px;
-    background: #02bd21;
+    padding: 0.75rem;
+    background: var(--primary-color);
     border: none;
     outline: none;
     border-radius: 6px;
-    font-size: 17px;
-    color: #fff;
-    margin-top: 5px;
+    font-size: 1rem; /* Responsive font size */
+    color: var(--white);
+    margin-top: 0.5rem;
     cursor: pointer;
-    transition: 5s;
+    transition: background-color 0.3s ease;
 }
 
-form .btn:hover{
-    background: #02bd21;
+form .btn:hover {
+    background: #028d16; /* Darker shade for hover */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .row .column {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+    
+    .container form {
+        padding: 15px;
+    }
+    
+    .input-box input {
+        font-size: 0.875rem; /* Slightly smaller font size on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .column .title {
+        font-size: 1rem; /* Smaller font size on very small screens */
+    }
+    
+    .input-box input {
+        padding: 0.5rem 0.75rem; /* Adjust padding */
+    }
+    
+    .form .btn {
+        font-size: 0.875rem; /* Smaller font size for buttons */
+        padding: 0.5rem;
+    }
 }
