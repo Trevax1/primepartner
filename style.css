@@ -27,6 +27,10 @@ form .row{
     gap: 15px;
 }
 
+.row .column{
+    flex: 1 1 250px;
+}
+
 .column .title {
     font-size: 20px;
     color: #333;
