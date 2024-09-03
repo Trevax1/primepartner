@@ -471,16 +471,16 @@ a:active {
 }
 
 .navbar-nav li.current>a {
-    color: #b8b8b8;
+    color: #47588f;
     font-weight: 600
 }
 
 .navbar>ul>li.current>a:after {
-    border-color: transparent #b8b8b8 #b8b8b8 transparent
+    border-color: transparent #47588f #47588f transparent
 }
 
 .navbar ul ul li.active>a {
-    color: #b8b8b8;
+    color: #47588f;
     font-weight: 600;
     opacity: 1
 }
