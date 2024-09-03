@@ -124,6 +124,29 @@
             </div>
         </div>
 
+         <!-- larger Companies -->
+        <div class="plan-card">
+            <h2>Pay as you go</h2>
+            <p>For larger companies</p>
+            <ul>
+                <li>Unlimited Course Retakes</li>
+                <li>Pay only for courses that you pass</li>
+                <li>Access to 50+ Courses</li>
+                <li>Certificate Upon Completion</li>
+                <li>Refund any Unused Credits</li>
+            </ul>
+            <label for="credits">How many credits would you like to buy?</label>
+            <div class="priceRanger">
+                <input type="range" id="credits" min="1" max="100" value="99" onchange="updatePayAsYouGoPrice()"
+                    oninput="updateCreditsValue()">
+                <span id="credits-value">99</span>
+            </div>
+            <p>Total Price: <span id="payasyougo-total">£30.00</span></p>
+            <a href="./payment.html">
+                <button id="payasyougo-button">Select - <span id="payasyougo-button-total">£445.50</span></button>
+            </a>
+        </div>
+
         <!-- start footer section -->
         <footer>
             <div class="container">
