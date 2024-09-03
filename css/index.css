@@ -45,16 +45,20 @@ body {
 
 /* Header */
 .header-style {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #011e7c;
 }
 
-.navbar-default {
-    padding: 15px 0;
+.navbar-header-custom {
+    padding: 10px 0;
 }
 
 .navbar-brand img {
-    max-height: 50px;
+    max-height: 65px;
+    transition-duration: 0.5s;
 }
 
 .navbar-nav {
@@ -69,13 +73,37 @@ body {
 }
 
 .navbar-nav a {
-    color: #333;
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
 
 .navbar-nav a:hover {
-    color: #3498db;
+    color: #ccc;
+}
+
+header.scrollHeader .navbar-default {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    background: #011e7c;
+    left: 0;
+}
+
+@media screen and (min-width: 992px) {
+    .scrollHeader .navbar-header-custom {
+        padding: 2.5px 0;
+        transition-duration: 0.5s;
+    }
+    .scrollHeader .navbar-brand img {
+        max-height: 40px;
+        transition-duration: 0.5s;
+    }
+}
+
+.navbar-nav>li>a {
+    font-size: 14px;
 }
 
 /* Plans Overview */
@@ -102,10 +130,10 @@ body {
     max-width: calc(33% - 20px);
 }
 
-.plan-card h3 {
+.plan-card h2 {
     font-size: 1.5rem;
     margin-top: 0;
-    color: #3498db;
+    color: #011e7c;
 }
 
 .plan-card ul {
@@ -127,7 +155,7 @@ input[type="range"] {
 }
 
 button {
-    background-color: #3498db;
+    background-color: #011e7c;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -137,13 +165,12 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #010b4b;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background: #011e7c;
     padding: 30px 0;
 }
 
@@ -175,7 +202,7 @@ footer h3 {
 }
 
 .footer-bar {
-    background-color: #222;
+    background: #071a58;
     color: #aaa;
     padding: 10px 0;
     text-align: center;
@@ -186,7 +213,7 @@ footer h3 {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #3498db;
+    background-color: #011e7c;
     color: #fff;
     padding: 10px;
     border-radius: 50%;
@@ -197,7 +224,7 @@ footer h3 {
 }
 
 .scroll-to-top:hover {
-    background-color: #2980b9;
+    background-color: #010b4b;
 }
 
 /* Responsive Design */
@@ -235,4 +262,36 @@ footer h3 {
         right: 10px;
         padding: 8px;
     }
+}
+
+@media screen and (max-width: 991px) {
+    .navbar-nav {
+        background: #2242ab;
+    }
+    .navbar-toggler:after {
+        border-top: 2px solid #2242ab;
+        border-bottom: 2px solid #2242ab;
+    }
+    .navbar-toggler:before {
+        background: #2242ab;
+    }
+    .navbar-toggler {
+        background: #f5f0f0;
+    }
+    .navbar-toggler.menu-opened:before {
+        background: #011e7c;
+    }
+    .navbar-toggler.menu-opened:after {
+        background: #011e7c;
+    }
+}
+
+/* Additional Styles */
+.butn.theme, .pricing-list.highlight, .pricing-list-button {
+    background: #011e7c;
+    color: #fff;
+}
+
+.pricing-list span {
+    color: #011e7c;
 }
