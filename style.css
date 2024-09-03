@@ -24,6 +24,7 @@
 
 form .row{
     display: flex;
+    gap: 15px;
 }
 
 .column .title {
@@ -31,4 +32,21 @@ form .row{
     color: #333;
     text-transform: uppercase;
     margin-bottom: 5px;
+}
+
+.column .input-box{
+    margin: 15px 0;
+}
+
+.input-box span{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-box input{
+    width: 100px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
 }
