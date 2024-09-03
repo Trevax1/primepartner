@@ -57,4 +57,22 @@ form .row{
 
 .column .flex{
     display: flex;
+    gap: 15px;
+}
+
+.flex .input-box{
+    margin-top: 5px;
+}
+
+form .btn{
+    width: 100%;
+    padding: 12px;
+    background: #02bd21;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
 }
