@@ -25,6 +25,11 @@
 .plan-card h2 {
     margin: 0 0 10px;
 }
+
+.plan-card h3 {
+    margin: 0 0 10px;
+}
+
 .priceRange {
     display: flex;
     gap: 20px;
