@@ -5,6 +5,7 @@ body {
     padding: 0;
     color: #333;
     background-color: #f9f9f9;
+    padding-top: 70px; /* Ensure content isn't hidden behind the fixed header */
 }
 
 /* Container */
@@ -45,11 +46,12 @@ body {
 
 /* Header */
 .header-style {
-    position: absolute;
-    left: 0;
+    position: fixed; /* Ensure the header stays at the top */
     top: 0;
+    left: 0;
     width: 100%;
     background: #011e7c;
+    z-index: 9999; /* Make sure it stays above other elements */
 }
 
 .navbar-header-custom {
@@ -82,10 +84,10 @@ body {
     color: #ccc;
 }
 
-header.scrollHeader .navbar-default {
-    position: fixed;
+.scrollHeader .navbar-default {
+    position: fixed; /* Ensures the navbar stays fixed on scroll */
     top: 0;
-    z-index: 99;
+    z-index: 9999;
     width: 100%;
     background: #011e7c;
     left: 0;
@@ -102,7 +104,7 @@ header.scrollHeader .navbar-default {
     }
 }
 
-.navbar-nav>li>a {
+.navbar-nav > li > a {
     font-size: 14px;
 }
 
