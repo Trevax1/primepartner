@@ -54,3 +54,7 @@ form .row{
     border-radius: 6px;
     font-size: 15px;
 }
+
+.column .flex{
+    display: flex;
+}
