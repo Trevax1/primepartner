@@ -123,6 +123,9 @@ body {
 }
 
 .plan-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
