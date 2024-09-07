@@ -67,7 +67,7 @@ header {
     font-size: 13px;
     font-weight: 600;
     padding: 20px 0.5rem;
-    color: #fff;
+    color: #232323;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     -webkit-transition-duration: 500ms;
@@ -88,7 +88,7 @@ header {
     top: 27px;
     right: -8px;
     content: "";
-    border-color: transparent #232323 #232323 transparent;
+    border-color: transparent #fff #fff transparent;
     border-style: solid;
     border-width: 0 1px 1px 0;
     display: block;
