@@ -4776,7 +4776,6 @@ body {
 }
 
 .section h2 {
-    line-height: 1em;
     font-size: 4.5em;
     color: #333;
     margin-bottom: 10px;
@@ -4787,6 +4786,7 @@ body {
 .section h2::after {
     content: "";
     display: block;
+    line-height: 2em;
     width: 350px; /* Adjust the width as needed */
     height: 4px; /* Thickness of the underline */
     background-color: #6f42c1; /* Purple color */
