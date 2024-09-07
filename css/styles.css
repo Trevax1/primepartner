@@ -4954,6 +4954,17 @@ footer h3 {
     }
 }
 
+.header-style, .header-style a, .header-style .navbar-toggler-icon {
+    color: #fff !important; /* Makes text color white */
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1); /* Makes the toggle button have a white border */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Ensures the toggler icon is white */
+}
 
 
 /*# sourceMappingURL=styles.css.map */
