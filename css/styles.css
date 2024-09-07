@@ -4787,7 +4787,7 @@ body {
     content: "";
     display: block;
     width: 50px; /* Adjust the width as needed */
-    height: 4px; /* Thickness of the underline */
+    height: 10px; /* Thickness of the underline */
     background-color: #6f42c1; /* Purple color */
     position: absolute;
     bottom: 0;
