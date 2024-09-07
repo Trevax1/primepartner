@@ -4767,16 +4767,33 @@ body {
 }
 
 .section {
-    background: #fff;
     padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.section h1, .section h2 {
+.section h2 {
+    font-size: 24px;
+    color: #333;
     margin-bottom: 15px;
+    position: relative; /* Necessary for positioning the pseudo-element */
+    padding-bottom: 10px;
 }
+
+.section h2::after {
+    content: "";
+    display: block;
+    width: 50px; /* Adjust the width as needed */
+    height: 4px; /* Thickness of the underline */
+    background-color: #6f42c1; /* Purple color */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 
 ul {
     list-style-type: disc;
