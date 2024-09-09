@@ -181,3 +181,29 @@ footer p {
 .project-single-info ul li span {
     width: 70%;
 }
+/* Ensure the navbar is displayed as flexbox */
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Aligns items in the center */
+}
+
+/* Ensure each nav item is displayed in line */
+.nav-item {
+    margin: 0 10px; /* Space between each nav item */
+}
+
+/* Adjust the nav links */
+.nav-link {
+    display: inline-block;
+    padding: 10px 15px; /* Add padding if needed */
+    color: #333; /* Adjust text color */
+    text-decoration: none;
+}
+
+/* Add styles for active link */
+.nav-link.active {
+    font-weight: bold;
+    color: #007bff; /* Change to your desired active link color */
+}
+
