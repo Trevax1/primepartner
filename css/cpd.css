@@ -292,3 +292,59 @@ ul li {
         font-size: 1em;
     }
 }
+/* General styles for header and navigation */
+.header-style {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-default {
+    background-color: #fff; /* Adjust as needed */
+    padding: 0;
+}
+
+.navbar {
+    padding: 0; /* Remove any default padding */
+}
+
+.navbar-brand {
+    padding: 0; /* Remove any default padding */
+    margin-right: auto; /* Pushes the brand to the left */
+}
+
+#logo {
+    max-width: 150px; /* Adjust the logo size as needed */
+    height: auto;
+}
+
+.navbar-nav {
+    margin-left: auto; /* Aligns navigation items to the right */
+}
+
+.nav-item {
+    margin-left: 15px; /* Adjust spacing between menu items */
+}
+
+.navbar-toggler {
+    border: none; /* Remove border if needed */
+}
+
+.navbar-toggler-icon {
+    background-image: url('path-to-your-icon.png'); /* Customize the toggler icon */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center; /* Center the menu items on mobile */
+    }
+
+    .nav-item {
+        margin-left: 0;
+        margin-bottom: 10px; /* Add spacing between menu items on mobile */
+    }
+
+    .navbar-collapse {
+        margin-top: 10px; /* Space above the collapsed menu */
+    }
+}
