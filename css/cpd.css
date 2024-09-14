@@ -192,25 +192,6 @@ body {
     border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .image-container {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    blockquote {
-        font-size: 1em;
-    }
-
-    p{
-        font-size: 1em;
-    }
-}
-
 /* Consultation Section */
 .consultation-section {
     background-color: #8ef169;
