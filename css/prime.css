@@ -21,7 +21,6 @@ body {
 }
 
 .navbar-brand img {
-    padding-left: 10px;
     max-height: 65px;
     transition-duration: 0.5s;
 }
