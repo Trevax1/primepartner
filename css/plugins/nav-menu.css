@@ -8,6 +8,7 @@ header {
 .navbar-brand img {
     max-height: 43px;
     transition-duration: 0.5s
+    padding: -20px;
 }
 
 .navbar-header-custom {
