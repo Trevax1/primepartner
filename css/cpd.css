@@ -246,26 +246,26 @@ body {
     text-align: center;
 }
 
- .container {
+.consultation-section .container {
     max-width: 600px;
     margin: 0 auto;
 }
 
- h1 {
+.consultation-section h1 {
     font-size: 2em;
     margin-bottom: 20px;
 }
 
- h1 span {
+.consultation-section h1 span {
     color: #000;
 }
 
- p {
+.consultation-section p {
     font-size: 1.1em;
     margin-bottom: 20px;
 }
 
- .btn {
+.consultation-section .btn {
     background-color: #fff;
     color: #8ef169;
     text-decoration: none;
@@ -275,7 +275,7 @@ body {
     font-weight: bold;
 }
 
- .btn:hover {
+.consultation-section .btn:hover {
     background-color: #6fb851;
     color: #fff;
 }
