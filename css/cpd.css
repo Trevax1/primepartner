@@ -144,3 +144,15 @@ li {
     font-size: 1.1em;
     margin-bottom: 10px;
 }
+
+@media (max-width: 768px) {
+    .cpd-section {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    p, li {
+        font-size: 1em;
+    }
+}
