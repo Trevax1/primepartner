@@ -1,3 +1,10 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #555;
+}
+
 /* Hero Section */
 .hero-section {
     position: relative;
@@ -6,12 +13,23 @@
     display: flex;
     align-items: center;
     color: #fff;
-    text-align: left;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.61);
+    z-index: 1;
 }
 
 .hero-section .container {
     z-index: 2;
     position: relative;
+    text-align: left;
     padding: 2rem;
 }
 
@@ -55,22 +73,40 @@
     background-color: #388E3C;
 }
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.61);
-    z-index: 1;
+/* Sections Styles */
+.section {
+    padding: 50px;
+}
+
+.section h2 {
+    text-align: left;
+    color: #040404;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.section p {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
+ul li {
+    font-size: 16px;
+    text-align: left;
 }
 
 /* CPD Section */
 .cpd-section {
-    padding: 50px 0 50px 50px; /* Top | Right | Bottom | Left */
+    padding: 50px;
     background-color: #fff;
-    text-align: left; /* Align text to the left */
 }
 
 .cpd-section h1 {
@@ -97,8 +133,6 @@
 }
 
 .cpd-section ul {
-    list-style-type: disc;
-    padding-left: 40px;
     color: #555;
 }
 
@@ -107,23 +141,10 @@
     margin-bottom: 10px;
 }
 
-@media (max-width: 768px){
-    .cpd-section {
-        padding: 20px;
-    }
-    .cpd-section h1 {
-        font-size: 2em;
-    }
-    .cpd-section p, .cpd-section li {
-        font-size: 1em;
-    }
-}
-
 /* Coach Section */
 .coach-section {
     padding: 50px 20px;
     background-color: #fff;
-    text-align: left; /* Align text to the left */
 }
 
 .coach-section .container {
@@ -155,30 +176,14 @@
     margin-bottom: 20px;
 }
 
-.coach-section .image-container {
-    flex-basis: 40px;
+.image-container {
+    flex-basis: 40%;
     text-align: right;
 }
 
-.coach-section .image-container img {
+.image-container img {
     max-width: 100px;
     border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-    .coach-section .container {
-        flex-direction: column;
-    }
-    .coach-section .image-container {
-        text-align: center;
-        margin-top: 20px;
-    }
-    .coach-section blockquote {
-        font-size: 1em;
-    }
-    .coach-section p {
-        font-size: 1em;
-    }
 }
 
 /* Consultation Section */
@@ -186,7 +191,7 @@
     background-color: #8ef169;
     color: #fff;
     padding: 50px 20px;
-    text-align: left; /* Align text to the left */
+    text-align: center;
 }
 
 .consultation-section .container {
@@ -223,38 +228,48 @@
     color: #fff;
 }
 
-/* General Section Styling */
-.section h2 {
-    text-align: left;
-    color: #040404;
-    font-size: 50px;
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-.section p {
-    text-align: left;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-}
-
-ul li {
-    font-size: 16px;
-    text-align: left;
-}
-
+/* Responsive Styles */
 @media (max-width: 732px) {
     .hero-section h1 {
-        text-align: center;
-        color: #fff;
         font-size: 25px;
-        font-weight: bold;
     }
+
     .hero-section p {
         font-size: 16px;
     }
+
     .hero-section .cta-button {
         font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cpd-section {
+        padding: 20px;
+    }
+
+    .cpd-section h1 {
+        font-size: 2em;
+    }
+
+    .cpd-section p, .cpd-section li {
+        font-size: 1em;
+    }
+
+    .coach-section .container {
+        flex-direction: column;
+    }
+
+    .image-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .coach-section blockquote {
+        font-size: 1em;
+    }
+
+    .coach-section p {
+        font-size: 1em;
     }
 }
