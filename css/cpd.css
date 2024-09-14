@@ -104,12 +104,25 @@ ul li {
 }
 
 /* CPD Section */
+body {
+    font-family: arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
 .cpd-section {
     padding: 50px;
     background-color: #fff;
 }
 
-.cpd-section h1 {
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+ h1 {
     font-size: 2.5em;
     color: #333;
     margin-bottom: 20px;
@@ -118,27 +131,41 @@ ul li {
     display: inline-block;
 }
 
-.cpd-section h3 {
+ h3 {
     font-size: 1.5em;
     color: #333;
     margin-top: 30px;
     margin-bottom: 20px;
 }
 
-.cpd-section p {
+ p {
     font-size: 1.1em;
     line-height: 1.6;
     color: #555;
     margin-bottom: 20px;
 }
 
-.cpd-section ul {
+ ul {
+    list-style-type: disc;
+    padding-left: 40px;
     color: #555;
 }
 
-.cpd-section li {
+ li {
     font-size: 1.1em;
     margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .cpd-section {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    p, li {
+        font-size: 1em;
+    }
 }
 
 /* Coach Section */
