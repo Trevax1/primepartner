@@ -4767,7 +4767,7 @@ body {
 }
 
 .section {
-    padding: 20px;
+    padding: 0px;
     margin: 20px auto;
     max-width: 800px;
     background-color: #f9f9f9;
