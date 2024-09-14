@@ -200,40 +200,33 @@ ul li {
 }
 
 /* Consultation Section */
-.consultation {
-    background-image: linear-gradient(180deg, rgba(64, 198, 33, 0.75) 0%, rgba(64, 198, 33, 0.75) 100%), url('https://consoulnlp.com/wp-content/uploads/2023/06/Phone-Call-BG.jpg');
-    background-position: center top;
-    background-size: cover;
-    background-repeat: no-repeat;
+.consultation-section {
+    background-color: #8ef169;
     color: #fff;
-    padding: 50px 0; /* Adjust padding as needed */
-    width: 100vw; /* Full width of viewport */
-    box-sizing: border-box; /* Ensure padding is included in width calculation */
-    margin: 0; /* Remove default margin */
+    padding: 50px 20px;
+    text-align: left; /* Align text to the left */
 }
 
-.consultation .container {
-    max-width: 1200px; /* Adjust max-width as needed */
-    margin: 0 auto; /* Center the container */
-    padding: 0 20px; /* Optional padding for internal spacing */
-    text-align: center; /* Center text within the container */
+.consultation-section .container {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.consultation h1 {
-    font-size: 2em; /* Adjust font size as needed */
-    margin-bottom: 20px; /* Margin below the heading */
+.consultation-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-.consultation h1 span {
-    color: #000; /* Color for the span element within h1 */
+.consultation-section h1 span {
+    color: #000;
 }
 
-.consultation p {
-    font-size: 1.1em; /* Font size for paragraphs */
-    margin-bottom: 20px; /* Margin below paragraphs */
+.consultation-section p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
 }
 
-.consultation .btn {
+.consultation-section .btn {
     background-color: #fff;
     color: #8ef169;
     text-decoration: none;
@@ -243,26 +236,10 @@ ul li {
     font-weight: bold;
 }
 
-.consultation .btn:hover {
+.consultation-section .btn:hover {
     background-color: #6fb851;
     color: #fff;
 }
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .consultation {
-        padding: 30px 0; /* Adjust padding for smaller screens */
-    }
-
-    .consultation h1 {
-        font-size: 1.5em; /* Adjust heading font size */
-    }
-
-    .consultation p {
-        font-size: 1em; /* Adjust paragraph font size */
-    }
-}
-
 
 /* Responsive Styles */
 @media (max-width: 732px) {
