@@ -1,3 +1,11 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #555;
+}
+
+/* Hero Section */
 .hero-section {
     position: relative;
     background: url("sign.jpg") no-repeat center center / cover;
@@ -6,9 +14,18 @@
     align-items: center;
     color: #fff;
 }
-.nav-item {
-    color: #fff!important;
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.61);
+    z-index: 1;
 }
+
 .hero-section .container {
     z-index: 2;
     position: relative;
@@ -25,7 +42,7 @@
 }
 
 .hero-section h1 {
-    text-align:center;
+    text-align: center;
     color: #fff;
     font-size: 3rem;
     font-weight: bold;
@@ -56,46 +73,203 @@
     background-color: #388E3C;
 }
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.61);
-    z-index: 1;
+/* Sections Styles */
+.section {
+    padding: 50px;
 }
 
-@media (max-width: 732px) {
-    .hero-section h1 {
-        text-align: center;
-        color: #fff;
-        font-size: 25px;
-        font-weight: bold;
-    }
-    .hero-section p {
-        font-size: 16px;
-    }
-    .hero-section .cta-button {
-        font-size: 15px;
-    }
-}
-.section h2{
-    text-align:left;
+.section h2 {
+    text-align: left;
     color: #040404;
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 1rem;
-    
 }
+
 .section p {
     text-align: left;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 2rem;
 }
+
+ul {
+    list-style-type: disc;
+    padding-left: 40px;
+}
+
 ul li {
     font-size: 16px;
     text-align: left;
+}
+
+/* CPD Section */
+.cpd-section {
+    padding: 50px;
+    background-color: #fff;
+}
+
+.cpd-section h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #666;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.cpd-section h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.cpd-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.cpd-section ul {
+    color: #555;
+}
+
+.cpd-section li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Coach Section */
+.coach-section {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.coach-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.coach-section h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.coach-section blockquote {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #666;
+    border-left: 4px solid #333;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.coach-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    flex-basis: 40%;
+    text-align: right;
+}
+
+.image-container img {
+    max-width: 100px;
+    border-radius: 10px;
+}
+
+/* Consultation Section */
+.consultation-section {
+    background-color: #8ef169;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.consultation-section .container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.consultation-section h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.consultation-section h1 span {
+    color: #000;
+}
+
+.consultation-section p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.consultation-section .btn {
+    background-color: #fff;
+    color: #8ef169;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.consultation-section .btn:hover {
+    background-color: #6fb851;
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 732px) {
+    .hero-section h1 {
+        font-size: 25px;
+    }
+
+    .hero-section p {
+        font-size: 16px;
+    }
+
+    .hero-section .cta-button {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cpd-section {
+        padding: 20px;
+    }
+
+    .cpd-section h1 {
+        font-size: 2em;
+    }
+
+    .cpd-section p, .cpd-section li {
+        font-size: 1em;
+    }
+
+    .coach-section .container {
+        flex-direction: column;
+    }
+
+    .image-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .coach-section blockquote {
+        font-size: 1em;
+    }
+
+    .coach-section p {
+        font-size: 1em;
+    }
 }
