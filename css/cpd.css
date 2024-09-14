@@ -199,34 +199,12 @@ ul li {
     border-radius: 10px;
 }
 
-/* Base Styles */
-.et_pb_section {
-    position: relative;
-    background-color: #fff;
-    background-position: 50%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.et_pb_all_tabs, 
-.et_pb_module, 
-.et_pb_posts_nav a, 
-.et_pb_tab, 
-.et_pb_with_background {
-    position: relative;
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
-}
-
-/* Consultation Section Styles */
+/* Consultation Section */
 .consultation-section {
-    background-image: linear-gradient(180deg, rgba(64, 198, 33, 0.75) 0%, rgba(64, 198, 33, 0.75) 100%), url(https://consoulnlp.com/wp-content/uploads/2023/06/Phone-Call-BG.jpg) !important;
-    background-position: center top;
-    background-size: cover;
+    background-color: #8ef169;
     color: #fff;
     padding: 50px 20px;
-    text-align: center;
+    text-align: left; /* Align text to the left */
 }
 
 .consultation-section .container {
@@ -261,40 +239,6 @@ ul li {
 .consultation-section .btn:hover {
     background-color: #6fb851;
     color: #fff;
-}
-
-/* Padding Adjustments for Other Sections */
-.et_pb_section_2 {
-    padding-top: 8vw;
-    padding-bottom: 8vw;
-}
-
-@media (min-width: 981px) {
-    .et_pb_section_2 {
-        padding: 4% 0;
-    }
-}
-
-/* Reset Styles */
-a, abbr, acronym, address, applet, b, big, blockquote, body, center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, tt, u, ul, var {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    vertical-align: baseline;
-    background: transparent;
-}
-
-* {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-body, input, textarea, select {
-    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
 }
 
 /* Responsive Styles */
