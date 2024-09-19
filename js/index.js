@@ -20,7 +20,7 @@ const pricingCalculator = {
     },
     updateSubscriptionPrice: function () {
         const learners = document.getElementById('learners').value;
-        const totalPrice = (this.coursePrices.subscription * 30 * learners).toFixed(2);
+        const totalPrice = (this.coursePrices.subscription * 30 * learners).toFixed(2); // Assuming 30 courses
         document.getElementById('subscription-total').textContent = `£${totalPrice}`;
         document.getElementById('subscription-button-total').textContent = `£${totalPrice}`;
         document.getElementById('learners-value').textContent = learners;
@@ -30,7 +30,7 @@ const pricingCalculator = {
         const totalPrice = (credits * this.coursePrices.payAsYouGo).toFixed(2);
         document.getElementById('payasyougo-total').textContent = `£${totalPrice}`;
         document.getElementById('payasyougo-button-total').textContent = `£${totalPrice}`;
-        document.getElementById('learners-value').textContent = credits;
+        document.getElementById('credits-value').textContent = credits;
     },
     updatePremiumPrice: function () {
         const premiumLearners = document.getElementById('premium-learners').value;
