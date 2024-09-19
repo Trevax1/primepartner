@@ -1,8 +1,8 @@
 const pricingCalculator = {
     coursePrices: {
-        subscription: 2.99,
-        payAsYouGo: 3.29,
-        premium: 50
+        subscription: 2.99,  // Price per course for Basic Subscription
+        payAsYouGo: 3.29,    // Price per course for Pay-As-You-Go Plan
+        premium: 50           // Price per learner for Premium Plan
     },
     init: function () {
         this.bindEvents();
@@ -20,7 +20,7 @@ const pricingCalculator = {
     },
     updateSubscriptionPrice: function () {
         const learners = document.getElementById('learners').value;
-        const totalPrice = (this.coursePrices.subscription * 30 * learners).toFixed(2); // Assuming 30 courses
+        const totalPrice = (this.coursePrices.subscription * 30 * learners).toFixed(2); // 30 courses
         document.getElementById('subscription-total').textContent = `£${totalPrice}`;
         document.getElementById('subscription-button-total').textContent = `£${totalPrice}`;
         document.getElementById('learners-value').textContent = learners;
@@ -30,7 +30,7 @@ const pricingCalculator = {
         const totalPrice = (credits * this.coursePrices.payAsYouGo).toFixed(2);
         document.getElementById('payasyougo-total').textContent = `£${totalPrice}`;
         document.getElementById('payasyougo-button-total').textContent = `£${totalPrice}`;
-        document.getElementById('credits-value').textContent = credits;
+        document.getElementById('credits-value').textContent = credits; // Update displayed credits count
     },
     updatePremiumPrice: function () {
         const premiumLearners = document.getElementById('premium-learners').value;
