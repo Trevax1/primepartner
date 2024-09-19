@@ -26,7 +26,7 @@ const pricingCalculator = {
         document.getElementById('learners-value').textContent = learners;
     },
     updatePayAsYouGoPrice: function () {
-        const credits = document.getElementById('credits').value;
+        const credits = document.getElementById('credits').value; // Using credits for Pay-As-You-Go
         const totalPrice = (credits * this.coursePrices.payAsYouGo).toFixed(2);
         document.getElementById('payasyougo-total').textContent = `£${totalPrice}`;
         document.getElementById('payasyougo-button-total').textContent = `£${totalPrice}`;
