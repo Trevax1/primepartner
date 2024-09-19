@@ -36,10 +36,10 @@ function updateSubscriptionPrice() {
 function updatePayAsYouGoPrice() {
     const priceFor50Courses = 164.50; // Price for 50 courses
     const numberOfLearners = document.getElementById('learners').value;
-    const totalPrice = (100 * priceFor50Courses).toFixed(2);
+    const totalPrice = (numberOfLearners * priceFor50Courses).toFixed(2);
     document.getElementById('payasyougo-total').innerText = `£${totalPrice}`;
     document.getElementById('payasyougo-button-total').innerText = `£${totalPrice}`;
-    document.getElementById('learners-value').innerText = 100; // Update displayed learners
+    document.getElementById('learners-value').innerText = numberOfLearners; // Update displayed learners
 }
 
 function updateLearnersValue() {
