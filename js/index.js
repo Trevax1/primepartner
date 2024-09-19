@@ -34,12 +34,12 @@ function updateSubscriptionPrice() {
 }
 
 function updatePayAsYouGoPrice() {
-    const pricePerCourse = 3.29;
-    const totalCourses = Math.max(50, document.getElementById('credits').value); // Minimum 50
-    const totalPrice = (totalCourses * pricePerCourse).toFixed(2);
+    const priceFor50Courses = 164.50; // Price for 50 courses
+    const numberOfLearners = document.getElementById('learners').value;
+    const totalPrice = (numberOfLearners * priceFor50Courses).toFixed(2);
     document.getElementById('payasyougo-total').innerText = `£${totalPrice}`;
     document.getElementById('payasyougo-button-total').innerText = `£${totalPrice}`;
-    document.getElementById('credits-value').innerText = totalCourses; // Update displayed credits
+    document.getElementById('learners-value').innerText = numberOfLearners; // Update displayed learners
 }
 
 function updateLearnersValue() {
