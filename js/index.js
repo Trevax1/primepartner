@@ -38,6 +38,7 @@ function updatePayAsYouGoPrice() {
     const credits = document.getElementById('credits').value;
     const pricePerCourse = 3.29;
     const totalPrice = (credits * pricePerCourse).toFixed(2);
+    
     document.getElementById('payasyougo-total').innerText = `£${totalPrice}`;
     document.getElementById('payasyougo-button-total').innerText = `£${totalPrice}`;
 }
