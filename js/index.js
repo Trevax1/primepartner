@@ -19,10 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('credits-value').innerText = credits;
     }
 
-    document.getElementById('premium-learners').addEventListener('input', function() {
-        updatePremiumPrice();
-        updatePremiumLearnersValue();
-    });
+    const pricePerCourse = 3.29;
+    function updatePremiumLearnersValue() {
+        const learnersInput = document.getElementById('premium-learners');
+        document.getElementById('premium-learners-value').textContent = learnersInput.value;
+    }
 });
 
 function updateSubscriptionPrice() {
@@ -42,25 +43,9 @@ function updatePayAsYouGoPrice() {
     document.getElementById('learners-value').innerText = numberOfLearners; // Update displayed learners
 }
 
-function updateLearnersValue() {
-    const learners = document.getElementById('learners').value;
-    document.getElementById('learners-value').textContent = learners;
-}
-
-function updateCreditsValue() {
-    const credits = document.getElementById('credits').value;
-    document.getElementById('credits-value').textContent = credits;
-}
-
 function updatePremiumPrice() {
-    const premiumLearners = document.getElementById('premium-learners').value;
-    const pricePerUser = 50; // Set the price per learner for the Premium plan
-    const total = premiumLearners * pricePerUser;
-    document.getElementById('premium-total').textContent = `£${total.toFixed(2)}`;
-    document.getElementById('premium-button-total').textContent = `£${total.toFixed(2)}`;
-}
-
-function updatePremiumLearnersValue() {
-    const premiumLearners = document.getElementById('premium-learners').value;
-    document.getElementById('premium-learners-value').textContent = premiumLearners;
+    const learnersInput = document.getElementById('premium-learners').value;
+    const totalPrice = (learnersInput * pricePerCourse).toFixed(2);
+    document.getElementById('premium-total').textContent = `£${totalPrice}`;
+    document.getElementById('premium-button-total').textContent = `£${totalPrice}`;
 }
