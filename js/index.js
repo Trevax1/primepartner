@@ -23,11 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function updateSubscriptionPrice() {
-    const learners = document.getElementById('learners').value;
-    const pricePerUser = 35;
-    const total = learners * pricePerUser;
-    document.getElementById('subscription-total').textContent = `£${total.toFixed(2)}`;
-    document.getElementById('subscription-button-total').textContent = `£${total.toFixed(2)}`;
+    const learnersInput = document.getElementById('learners').value;
+    const coursePrice = 2.99;
+    const totalPrice = (coursePrice * 30 * learnersInput).toFixed(2);
+    
+    document.getElementById('subscription-total').textContent = `£${totalPrice}`;
+    document.getElementById('subscription-button-total').textContent = `£${totalPrice}`;
 }
 
 function updatePayAsYouGoPrice() {
