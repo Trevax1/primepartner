@@ -8,10 +8,12 @@ document.addEventListener('DOMContentLoaded', function() {
     updatePremiumLearnersValue();
     
     // Event listeners for input changes
-    document.getElementById('learners').addEventListener('input', function() {
-        updateSubscriptionPrice();
-        updateLearnersValue();
-    });
+    function updateLearnersValue() {
+        const learnersInput = document.getElementById('learners');
+        const learnersValue = document.getElementById('learners-value');
+        learnersValue.textContent = learnersInput.value;
+    }
+    
     document.getElementById('credits').addEventListener('input', function() {
         updatePayAsYouGoPrice();
         updateCreditsValue();
