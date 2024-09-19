@@ -30,7 +30,7 @@ const pricingCalculator = {
         const totalPrice = (credits * this.coursePrices.payAsYouGo).toFixed(2);
         document.getElementById('payasyougo-total').textContent = `£${totalPrice}`;
         document.getElementById('payasyougo-button-total').textContent = `£${totalPrice}`;
-        document.getElementById('credits-value').textContent = credits;
+        document.getElementById('learners-value').textContent = credits;
     },
     updatePremiumPrice: function () {
         const premiumLearners = document.getElementById('premium-learners').value;
