@@ -14,10 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
         learnersValue.textContent = learnersInput.value;
     }
     
-    document.getElementById('credits').addEventListener('input', function() {
-        updatePayAsYouGoPrice();
-        updateCreditsValue();
-    });
+    function updateCreditsValue() {
+        const credits = document.getElementById('credits').value;
+        document.getElementById('credits-value').innerText = credits;
+    }
+
     document.getElementById('premium-learners').addEventListener('input', function() {
         updatePremiumPrice();
         updatePremiumLearnersValue();
@@ -35,10 +36,10 @@ function updateSubscriptionPrice() {
 
 function updatePayAsYouGoPrice() {
     const credits = document.getElementById('credits').value;
-    const pricePerCredit = 4.5;
-    const total = credits * pricePerCredit;
-    document.getElementById('payasyougo-total').textContent = `£${total.toFixed(2)}`;
-    document.getElementById('payasyougo-button-total').textContent = `£${total.toFixed(2)}`;
+    const pricePerCourse = 3.29;
+    const totalPrice = (credits * pricePerCourse).toFixed(2);
+    document.getElementById('payasyougo-total').innerText = `£${totalPrice}`;
+    document.getElementById('payasyougo-button-total').innerText = `£${totalPrice}`;
 }
 
 function updateLearnersValue() {
