@@ -67,6 +67,7 @@
                 </div>
             </div>
         </header>
+        
         <!-- end header section -->
 
         <!-- start service section -->
@@ -83,14 +84,14 @@
                             <li>Access to 30 Diverse Courses</li>
                             <li>Certificate Upon Completion</li>
                         </ul>
-                        <label for="basic-learners">How many learners would you like to subscribe?</label>
+                        <label for="learners">How many learners would you like to subscribe?</label>
                         <div class="priceRanger">
-                            <input type="range" id="basic-learners" min="1" max="100" value="1" oninput="updatePrice('basic')">
-                            <span id="basic-learners-value">1</span>
+                            <input type="range" id="learners" min="1" max="100" value="1" onchange="updateSubscriptionPrice()" oninput="updateLearnersValue()">
+                            <span id="learners-value">9</span>
                         </div>
-                        <p>Total Price: <span id="basic-total">£89.70</span></p>
+                        <p>Total Price: <span id="subscription-total">£2.99.00</span></p>
                         <a href="./payment.html">
-                            <button id="basic-button">Select - <span id="basic-button-total">£89.70</span></button>
+                            <button id="subscription-button">Select - <span id="subscription-button-total">£2.99.00</span></button>
                         </a>
                     </div>
 
@@ -104,14 +105,14 @@
                             <li>Access to 50+ Courses</li>
                             <li>Certificate Upon Completion</li>
                         </ul>
-                        <label for="payg-learners">How many learners would you like to subscribe?</label>
+                        <label for="credits">How many learners would you like to subscribe?</label>
                         <div class="priceRanger">
-                            <input type="range" id="payg-learners" min="1" max="100" value="1" oninput="updatePrice('payg')">
-                            <span id="payg-learners-value">1</span>
+                            <input type="range" id="learners" min="1" max="100" value="1" onchange="updatePayAsYouGoPrice()" oninput="updateCreditsValue()">
+                            <span id="credits-value">1</span>
                         </div>
-                        <p>Total Price: <span id="payg-total">£164.50</span></p>
+                        <p>Total Price: <span id="payasyougo-total">£164.50</span></p>
                         <a href="./payment.html">
-                            <button id="payg-button">Select - <span id="payg-button-total">£164.50</span></button>
+                            <button id="payasyougo-button">Select - <span id="payasyougo-button-total">£164.50</span></button>
                         </a>
                     </div>
 
@@ -127,7 +128,7 @@
                         </ul>
                         <label for="premium-learners">How many learners would you like to enroll?</label>
                         <div class="priceRanger">
-                            <input type="range" id="premium-learners" min="1" max="100" value="15" oninput="updatePrice('premium')">
+                            <input type="range" id="premium-learners" min="1" max="100" value="15" onchange="updatePremiumPrice()" oninput="updatePremiumLearnersValue()">
                             <span id="premium-learners-value">15</span>
                         </div>
                         <p>Total Price: <span id="premium-total">£329.00</span></p>
@@ -141,21 +142,21 @@
         <!-- end service section --> 
 
         <!-- start subscribe section -->
-        <section class="parallax" data-overlay-dark="6" data-background="img/bg/bg2.jpg">
-            <div class="container">
-                <div class="section-heading white">
-                    <h3>Stay informed</h3>
-                    <p class="width-55 sm-width-75 xs-width-95">For the latest news and infomation in the care industry subscribe to our news letter.</p>
-                </div>
-                <div class="text-center">
-                    <form action="#" class="newsletter-form method=post">
-                        <input name="email" placeholder="Enter Your Email adress" type="email">
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <!-- end subscribe section -->
+<section class="parallax" data-overlay-dark="6" data-background="img/bg/bg2.jpg">
+    <div class="container">
+        <div class="section-heading white">
+            <h3>Stay informed</h3>
+            <p class="width-55 sm-width-75 xs-width-95">For the latest news and infomation in the care industry subscribe to our news letter.</p>
+        </div>
+        <div class="text-center">
+            <form action="#" class="newsletter-form method=post">
+                <input name="email" placeholder="Enter Your Email adress" type="email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- end subscribe section -->
 
         <!-- start footer section -->
         <footer>
@@ -181,28 +182,26 @@
                         <h3>Our Services</h3>
                         <ul class="footer-list">
                             <li><a href="services.html">Care Training Packages</a></li>
-                            <li><a href="FAQS.html">CQC Compliance</a></li>
-                            <li><a href="Contact us.html">Level 5 Care</a></li>
-                            <li><a href="home.html">Safeguarding</a></li>
+                            <li><a href="services.html"> CQC registration & Support</a></li>
+                            <li><a href="services.html"> CQC Pre-Inspection Audits</a></li>
+                            <li><a href="services.html"> Website Design & Development</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3>Contact Us</h3>
-                        <ul class="address-list">
-                            <li>
-                                <span>Address: </span>63 Ealing Road Wembley, Middlesex, HA04BP
-                            </li>
-                            <li>
-                                <span>Email: </span>info@primepartnershiptraining.co.uk
-                            </li>
-                            <li>
-                                <span>Phone: </span>02036525475
-                            </li>
+                    <div class="col-lg-3 col-md-6 sm-margin-30px-bottom">
+                        <h3>Top Training Packages</h3>
+                        <ul class="footer-list">
+                            <li><a href="Diet & Nutrition.html">Diet & Nutrition</a></li>
+                            <li><a href="Diabetes.html">Diabetes</a></li>
+                            <li><a href="Basic First Aid.html">Basic First Aid</a></li>
+                            <li><a href="Administration of Medicines.html">Administration of Medicines</a></li>
+                            <li><a href="Health & Safety.html">Health & Safety</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="footer-bar">
-                    <p>© 2022 Primepartnershiptraining All Rights Reserved.</p>
+            </div>
+            <div class="footer-bar">
+                <div class="container">
+                    <p>&copy; 2021 Prime Partnership & Training is Powered by Solvak</p>
                 </div>
             </div>
         </footer>
@@ -211,71 +210,30 @@
     </div>
     <!-- end main-wrapper section -->
 
-    <!-- inject js start -->
+    <!-- start scroll to top -->
+    <a href="javascript:void(0)" class="scroll-to-top"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+    <!-- end scroll to top -->
 
-    <!--== jquery -->
-    <script src="js/jquery.min.js"></script>
+    <!-- all js include start -->
+    <!-- JavaScript -->
+    <script src="js/core.min.js"></script>
 
-    <!--== popper -->
-    <script src="js/popper.min.js"></script>
+    <!-- revolution slider js files start -->
+    <script src="./js/index.js"></script>
+    <script src="/assets/js/rev_slider/jquery.themepunch.tools.min.js"></script>
+    <script src="/assets/js/rev_slider/jquery.themepunch.revolution.min.js"></script>
+    <script src="/assets/js/rev_slider/extensions/revolution.extension.actions.min.js"></script>
+    <script src="/assets/js/rev_slider/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="/assets/js/rev_slider/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="/assets/js/rev_slider/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="/assets/js/rev_slider/extensions/revolution.extension.migration.min.js"></script>
+    <script src="/assets/js/rev_slider/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="/assets/js/rev_slider/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="/assets/js/rev_slider/extensions/revolution.extension.slideanims.min.js"></script>
+    <!-- revolution slider js files end -->
 
-    <!--== bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!--== appear -->
-    <script src="js/jquery.appear.js"></script>
-
-    <!--== modernizr -->
-    <script src="js/modernizr.js"></script>
-
-    <!--== rev slider -->
-    <script src="js/rev_slider/jquery.themepunch.tools.min.js"></script>
-    <script src="js/rev_slider/jquery.themepunch.revolution.min.js"></script>
-
-    <!--== rev slider navigation -->
-    <script src="js/rev_slider/revolution.extension.navigation.min.js"></script>
-
-    <!--== custom script -->
-    <script src="js/custom.js"></script>
-
-    <!--== price slider script -->
-    <script>
-        function updatePrice(plan) {
-            const basicPrice = 89.70;
-            const paygPrice = 164.50;
-            const premiumPrice = 329.00;
-
-            let learners, price, total;
-
-            switch (plan) {
-                case 'basic':
-                    learners = document.getElementById('basic-learners').value;
-                    total = (learners * basicPrice).toFixed(2);
-                    document.getElementById('basic-learners-value').textContent = learners;
-                    document.getElementById('basic-total').textContent = '£' + total;
-                    document.getElementById('basic-button-total').textContent = '£' + total;
-                    break;
-
-                case 'payg':
-                    learners = document.getElementById('payg-learners').value;
-                    total = (learners * paygPrice).toFixed(2);
-                    document.getElementById('payg-learners-value').textContent = learners;
-                    document.getElementById('payg-total').textContent = '£' + total;
-                    document.getElementById('payg-button-total').textContent = '£' + total;
-                    break;
-
-                case 'premium':
-                    learners = document.getElementById('premium-learners').value;
-                    total = (learners * premiumPrice).toFixed(2);
-                    document.getElementById('premium-learners-value').textContent = learners;
-                    document.getElementById('premium-total').textContent = '£' + total;
-                    document.getElementById('premium-button-total').textContent = '£' + total;
-                    break;
-            }
-        }
-    </script>
-
-    <!-- inject js end -->
+    <!-- custom scripts -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>
